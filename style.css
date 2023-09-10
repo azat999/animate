@@ -1,0 +1,42 @@
+@keyframes charge {
+    0%, 100% {
+        fill: #FCEE0A;
+        transform: translateY(0);
+    }
+    50% {
+        fill: #3498db;
+        transform: translateY(-5px);
+    }
+}
+
+path {
+    fill: transparent; /* Начинаем с прозрачных элементов */
+    animation: charge 2s infinite;
+}
+
+.path1 {
+    animation-delay: 0.5s; /* Задержка для первого элемента */
+}
+
+.path2 {
+    animation-delay: 1s; /* Задержка для второго элемента */
+}
+
+.path3 {
+    animation-delay: 1.5s; /* Задержка для третьего элемента */
+}
+
+@keyframes lightning {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.lightning {
+    fill: none;
+    stroke: #00F0FF;
+    stroke-width: 4;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: lightning 2s linear forwards infinite; /* Добавляем "infinite" для бесконечной анимации */
+}
